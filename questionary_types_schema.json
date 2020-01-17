@@ -1,0 +1,783 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "questionary_types_schema.json",
+    "type": "object",
+    "description": "Schema eF85 MD Common Types",
+    "additionalProperties": false,
+    "definitions": {
+        "Question01Type": {
+            "$id": "#/definitions/Question01Type",
+            "type": "object",
+            "description": "Describes question 01 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F1"
+                },
+                "answer": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "if": {
+                "properties": {
+                    "answer": {
+                        "properties": {
+                            "answer": {
+                                "const": false
+                            }
+                        }
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "answer": {
+                        "required": [
+                            "description"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "description",
+                "answer",
+                "refID"
+            ]
+        },
+        "Question02Type": {
+            "$id": "#/definitions/Question02Type",
+            "type": "object",
+            "description": "Describes question 02 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F2"
+                },
+                "answer": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "if": {
+                "properties": {
+                    "answer": {
+                        "properties": {
+                            "answer": {
+                                "const": false
+                            }
+                        }
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "answer": {
+                        "required": [
+                            "description"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "description",
+                "answer",
+                "refID"
+            ]
+        },
+        "Question02AType": {
+            "$id": "#/definitions/Question02AType",
+            "type": "object",
+            "description": "Describes question 02A of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F2A"
+                },
+                "answer": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "if": {
+                "properties": {
+                    "answer": {
+                        "properties": {
+                            "answer": {
+                                "const": false
+                            }
+                        }
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "answer": {
+                        "required": [
+                            "description"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "description",
+                "answer",
+                "refID"
+            ]
+        },
+        "Question02BType": {
+            "$id": "#/definitions/Question02BType",
+            "type": "object",
+            "description": "Describes question 02B of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F2B"
+                },
+                "answer": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "if": {
+                "properties": {
+                    "answer": {
+                        "properties": {
+                            "answer": {
+                                "const": true
+                            }
+                        }
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "answer": {
+                        "required": [
+                            "description"
+                        ]
+                    }
+                },
+                "required": [
+                    "description",
+                    "answer",
+                    "documentIDs",
+                    "refID"
+                ]
+            },
+            "else": {
+                "required": [
+                    "description",
+                    "answer",
+                    "refID"
+                ]
+            }
+        },
+        "Question03Type": {
+            "$id": "#/definitions/Question03Type",
+            "type": "object",
+            "description": "Describes question 03 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F3"
+                },
+                "answer": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                },
+                "taxDomicilePeriod": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/TaxDomicilePeriodType"
+                    }
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "if": {
+                "properties": {
+                    "answer": {
+                        "properties": {
+                            "answer": {
+                                "const": true
+                            }
+                        }
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "description",
+                    "answer",
+                    "refID"
+                ]
+            },
+            "else": {
+                "required": [
+                    "description",
+                    "answer",
+                    "taxDomicilePeriod",
+                    "refID"
+                ]
+            }
+        },
+        "Question04Type": {
+            "$id": "#/definitions/Question04Type",
+            "type": "object",
+            "description": "Describes question 04 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F4"
+                },
+                "answer": {
+                    "properties": {
+                        "answer": {
+                            "const": true
+                        }
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "required": [
+                "description",
+                "answer",
+                "refID"
+            ]
+        },
+        "Question05AType": {
+            "$id": "#/definitions/Question05AType",
+            "type": "object",
+            "description": "Describes question 05A of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F5A"
+                },
+                "answer": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                },
+                "affiliatedEntity": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AffiliatedEntityType"
+                    }
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "if": {
+                "properties": {
+                    "answer": {
+                        "properties": {
+                            "answer": {
+                                "const": true
+                            }
+                        }
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "affiliatedEntity": {
+                        "items": {
+                            "properties": {
+                                "entityType": {
+                                    "type": "string",
+                                    "enum": [ "Betriebsstätte" ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "required": [
+                    "description",
+                    "answer",
+                    "documentIDs",
+                    "affiliatedEntity",
+                    "refID"
+                ]
+            },
+            "else": {
+                "required": [
+                    "description",
+                    "answer",
+                    "refID"
+                ]
+            }
+        },
+        "Question05BType": {
+            "$id": "#/definitions/Question05BType",
+            "type": "object",
+            "description": "Describes question 05B of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F5B"
+                },
+                "answer": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                },
+                "affiliatedEntity": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AffiliatedEntityType"
+                    }
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "if": {
+                "properties": {
+                    "answer": {
+                        "properties": {
+                            "answer": {
+                                "const": true
+                            }
+                        }
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "affiliatedEntity": {
+                        "items": {
+                            "properties": {
+                                "entityType": {
+                                    "type": "string",
+                                    "enum": [ "Kollektivgesellschaft", "Kommanditgesellschaft" ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "required": [
+                    "description",
+                    "answer",
+                    "affiliatedEntity",
+                    "documentIDs",
+                    "refID"
+                ]
+            },
+            "else": {
+                "required": [
+                    "description",
+                    "answer",
+                    "refID"
+                ]
+            }
+        },
+        "Question06Type": {
+            "$id": "#/definitions/Question06Type",
+            "type": "object",
+            "description": "Describes question 06 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F6"
+                },
+                "answer": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "if": {
+                "properties": {
+                    "answer": {
+                        "properties": {
+                            "answer": {
+                                "const": false
+                            }
+                        }
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "answer": {
+                        "required": [
+                            "description"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "description",
+                "answer",
+                "refID"
+            ]
+        },
+        "Question07Type": {
+            "$id": "#/definitions/Question07Type",
+            "type": "object",
+            "description": "Describes question 07 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F7"
+                },
+                "answer": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "required": [
+                "description",
+                "answer",
+                "refID"
+            ]
+        },
+        "Question08Type": {
+            "$id": "#/definitions/Question08Type",
+            "type": "object",
+            "description": "Describes question 08 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F8"
+                },
+                "answer": {
+                    "properties": {
+                        "answer": {
+                            "const": true
+                        }
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "required": [
+                "description",
+                "answer",
+                "refID"
+            ]
+        },
+        "Question09Type": {
+            "$id": "#/definitions/Question09Type",
+            "type": "object",
+            "description": "Describes question 09 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F9"
+                },
+                "answer": {
+                    "properties": {
+                        "answer": {
+                            "const": true
+                        }
+                    }
+                },
+                "affiliatedEntity": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/EquityHoldingPersonType"
+                    }
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "oneOf": [
+                {
+                    "required": [
+                        "description",
+                        "answer",
+                        "affiliatedEntity",
+                        "refID"
+                    ]
+                },
+                {
+                    "required": [
+                        "description",
+                        "answer",
+                        "documentIDs",
+                        "refID"
+                    ]
+                }
+            ]
+        },
+        "Question10Type": {
+            "$id": "#/definitions/Question10Type",
+            "type": "object",
+            "description": "Describes question 10 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F10"
+                },
+                "answer": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "if": {
+                "properties": {
+                    "answer": {
+                        "properties": {
+                            "answer": {
+                                "const": false
+                            }
+                        }
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "description",
+                    "answer",
+                    "documentIDs",
+                    "refID"
+                ]
+            },
+            "else": {
+                "required": [
+                    "description",
+                    "answer",
+                    "refID"
+                ]
+            }
+        },
+        "Question11Type": {
+            "$id": "#/definitions/Question11Type",
+            "type": "object",
+            "description": "Describes question 11 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F11"
+                },
+                "answer": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                },
+                "testator": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/DeceasedPersonType"
+                },
+                "affiliatedEntity": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/BeneficiaryPersonType"
+                    }
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "if": {
+                "properties": {
+                    "answer": {
+                        "properties": {
+                            "answer": {
+                                "const": true
+                            }
+                        }
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "description",
+                    "answer",
+                    "testator",
+                    "affiliatedEntity",
+                    "documentIDs",
+                    "refID"
+                ]
+            },
+            "else": {
+                "required": [
+                    "description",
+                    "answer",
+                    "refID"
+                ]
+            }
+        },
+        "Question12Type": {
+            "$id": "#/definitions/Question12Type",
+            "type": "object",
+            "description": "Describes question 12 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F12"
+                },
+                "answer": {
+                    "properties": {
+                        "answer": {
+                            "const": true
+                        }
+                    }
+                },
+                "assetTitles": {
+                    "type": "array",
+                    "description": "Asset title",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AssetTitlesType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "required": [
+                "description",
+                "answer",
+                "assetTitles",                
+                "refID"
+            ]
+        },
+        "Question13Type": {
+            "$id": "#/definitions/Question13Type",
+            "type": "object",
+            "description": "Describes question 13 of the questionnaire",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "const": "F13"
+                },
+                "answer": {
+                    "properties": {
+                        "answer": {
+                            "const": true
+                        }
+                    }
+                },
+                "affiliatedEntity": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/HolderPersonType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "required": [
+                "description",
+                "answer",
+                "affiliatedEntity",
+                "refID"
+            ]
+        }
+    }
+}

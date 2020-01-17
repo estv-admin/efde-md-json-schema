@@ -1,0 +1,114 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "claim_status_query_output_schema.json",
+    "type": "object",
+    "description": "Schema eF85 MD Claim Status Output",
+    "additionalProperties": false,
+    "definitions": {
+        "ClaimStatusType": {
+            "$id": "#/definitions/ClaimStatusType",
+            "type": "object",
+            "description": "Represents the status of a claim",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "claimID": {
+                    "type": "string"
+                },
+                "caseID": {
+                    "type": "string"
+                },
+                "status": {
+                    "enum": [ "Processing", "Created", "Submitted", "Rejected", "Completed", "Rejected Wrong Version of Claim", "Rejected Handwritten notes found", "Rejected Missing Signature" ]
+                },
+                "claimYears": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "pattern": "^\\d\\d\\d\\d$"
+
+                    }
+                },
+                "totalRefundAmount": {
+                    "type": "number"
+                },
+                "lastChange": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "rejectionReason": {
+                    "type": "string"
+                }
+            },
+            "if": {
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "enum": [ "Rejected" ]
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "claimID",
+                    "caseID",
+                    "status",
+                    "claimYears",
+                    "totalRefundAmount",
+                    "lastChange",
+                    "rejectionReason"
+                ]
+            },
+            "else": {
+                "required": [
+                    "claimID",
+                    "caseID",
+                    "status",
+                    "claimYears",
+                    "totalRefundAmount",
+                    "lastChange"
+                ]
+            }
+        }
+    },
+    "properties": {
+        "success": {
+            "description": "Result of the operation",
+            "type": "boolean"
+        },
+        "claimStatus": {
+            "type": "array",
+            "items": {
+                "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_status_query_output_schema.json#/definitions/ClaimStatusType"
+            }
+        },
+        "error": {
+            "oneOf": [
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+                    }
+                }
+            ]
+        }
+    },
+    "if": {
+        "properties": { "success": { "const": false } }
+    },
+    "then": {
+        "required": [
+            "success",
+            "error"
+        ]
+    },
+    "else": {
+        "required": [
+            "success",
+            "claimStatus"
+        ]
+    }
+}

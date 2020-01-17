@@ -1,0 +1,615 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "claim_types_schema.json",
+    "type": "object",
+    "description": "Schema eF85 MD Common Types",
+    "additionalProperties": false,
+    "definitions": {
+        "AssetTypeType": {
+            "$id": "#/definitions/AssetTypeType",
+            "description": "Type of an asset",
+            "oneOf": [
+                { "const": "share" },
+                { "const": "bond" },
+                { "const": "investment" },
+                { "const": "account" },
+                { "const": "monetary" }
+            ]
+        },
+        "ClaimYearType": {
+            "$id": "#/definitions/ClaimYearType",
+            "type": "object",
+            "description": "Describes an year of a claim",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "year": {
+                    "type": "number",
+                    "description": "Year of a claim"
+                }
+            },
+            "required": [
+                "year"
+            ]
+        },
+        "ClaimSecurityType": {
+            "$id": "#/definitions/ClaimSecurityType",
+            "type": "object",
+            "description": "Describes a security with monetary value",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "institutionName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/InstitutionNameType"
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Type of the security"
+                },
+                "location": {
+                    "type": "string",
+                    "description": "Location of the issuing entity"
+                },
+                "assetType": {
+                    "$ref": "#/definitions/AssetTypeType"
+                },
+                "isin": {
+                    "type": "string",
+                    "description": "ISIN number of a security"
+                },
+                "valor": {
+                    "type": "string",
+                    "description": "Valor number of a title"
+                },
+                "uid": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UIDType"
+                },
+                "acquiredDate": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/AcquiredDateType"
+                },
+                "dueDate": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/DueDateType"
+                },
+                "refundRate": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/RefundRateType"
+                },
+                "nbTitles": {
+                    "type": "number",
+                    "description": "Number of titles"
+                },
+                "dividendPerTitle": {
+                    "type": "number",
+                    "description": "Dividend per title"
+                },
+                "grossDividend": {
+                    "type": "number",
+                    "description": "Gross dividend per title"
+                },
+                "refundAmountDividend": {
+                    "type": "number",
+                    "description": "Refund amount resulting from gross dividend and refund rate"
+                },
+                "amountTitleOrganisation": {
+                    "type": "number",
+                    "description": "Number of titles made available by the issuer"
+                },
+                "credit": {
+                    "type": "number",
+                    "description": "Credit amount of the bond"
+                },
+                "interestRate": {
+                    "type": "number",
+                    "description": "Interest rate of the bond"
+                },
+                "nominal": {
+                    "type": "number",
+                    "description": "Nominal value of the bond"
+                },
+                "paymentValue": {
+                    "type": "number",
+                    "description": "Value of the payment of the bond"
+                },
+                "grossInterest": {
+                    "type": "number",
+                    "description": "Result of credit * interestRate"
+                },
+                "refundAmountInterest": {
+                    "type": "number",
+                    "description": "Refund amount based on the interest of the bond"
+                },
+                "correctedRefundAmount": {
+                    "type": "number",
+                    "description": "Refund amount minus the corrections"
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "allOf": [
+                {
+                    "if": {
+                        "properties": { "assetType": { "const": "bond" } }
+                    },
+                    "then": {
+                        "required": [
+                            "institutionName",
+                            "title",
+                            "location",
+                            "assetType",
+                            "isin",
+                            "valor",
+                            "acquiredDate",
+                            "dueDate",
+                            "refundRate",
+                            "credit",
+                            "interestRate",
+                            "nominal",
+                            "paymentValue",
+                            "grossInterest",
+                            "refundAmountInterest"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": { "assetType": { "const": "investment" } }
+                    },
+                    "then": {
+                        "required": [
+                            "institutionName",
+                            "title",
+                            "location",
+                            "assetType",
+                            "uid",
+                            "acquiredDate",
+                            "dueDate",
+                            "refundRate",
+                            "nbTitles",
+                            "dividendPerTitle",
+                            "grossDividend",
+                            "refundAmountDividend",
+                            "amountTitleOrganisation"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "assetType": { "const": "share" },
+                            "refundRate": { "const": 30 }
+                        }
+                    },
+                    "then": {
+                        "required": [
+                            "institutionName",
+                            "location",
+                            "assetType",
+                            "uid",
+                            "acquiredDate",
+                            "dueDate",
+                            "refundRate",
+                            "nbTitles",
+                            "dividendPerTitle",
+                            "grossDividend",
+                            "refundAmountDividend"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "assetType": { "const": "share" },
+                            "refundRate": { "not": { "const": 30 } }
+                        }
+                    },
+                    "then": {
+                        "required": [
+                            "institutionName",
+                            "title",
+                            "location",
+                            "assetType",
+                            "isin",
+                            "valor",
+                            "acquiredDate",
+                            "dueDate",
+                            "refundRate",
+                            "nbTitles",
+                            "dividendPerTitle",
+                            "grossDividend",
+                            "refundAmountDividend"
+                        ]
+                    }
+                }
+            ]
+        },
+        "ClaimAccountType": {
+            "$id": "#/definitions/ClaimAccountType",
+            "type": "object",
+            "description": "Describes an account",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "IBAN": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/IbanType"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description of the account",
+                    "minLength": 3
+                },
+                "dueDate": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/DueDateType"
+                },
+                "refundRate": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/RefundRateType"
+                },
+                "grossInterest": {
+                    "type": "number",
+                    "description": "Gross interest of the account"
+                },
+                "refundAmount": {
+                    "type": "number",
+                    "description": "Refund amount resulting from gross interest and refund rate"
+                },
+                "correctedRefundAmount": {
+                    "type": "number",
+                    "description": "Refund amount minus the corrections"
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "required": [
+                "IBAN",
+                "description",
+                "dueDate",
+                "refundRate",
+                "grossInterest",
+                "refundAmount",
+                "documentIDs",
+                "refID"
+            ]
+        },
+        "ClaimMonetaryType": {
+            "$id": "#/definitions/ClaimMonetaryType",
+            "type": "object",
+            "description": "Describes a monetary",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "institutionName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/InstitutionNameType"
+                },
+                "monetaryName": {
+                    "type": "string",
+                    "description": "Description of the monetary"
+                },
+                "dueDate": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/DueDateType"
+                },
+                "refundRate": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/RefundRateType"
+                },
+                "grossIncome": {
+                    "type": "number",
+                    "description": "Gross income of the monetary"
+                },
+                "refundAmount": {
+                    "type": "number",
+                    "description": "Refund amount resulting from gross interest and refund rate"
+                },
+                "correctedRefundAmount": {
+                    "type": "number",
+                    "description": "Refund amount minus the corrections"
+                },
+                "documentIDs": {
+                    "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    }
+                },
+                "refID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                }
+            },
+            "required": [
+                "institutionName",
+                "monetaryName",
+                "dueDate",
+                "refundRate",
+                "grossIncome",
+                "refundAmount",
+                "documentIDs",
+                "refID"
+            ]
+        },
+        "AnswerType": {
+            "$id": "#/definitions/AnswerType",
+            "type": "object",
+            "description": "Yes/No answer with an optional descriptive text",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "answer": {
+                    "type": "boolean",
+                    "description": "Yes/No reply"
+                },
+                "description": {
+                    "type": "string",
+                    "minLength": 2,
+                    "description": "Additional information in reply to the question"
+                }
+            },
+            "required": [
+                "answer"
+            ]
+        },
+        "TaxDomicilePeriodType": {
+            "$id": "#/definitions/TaxDomicilePeriodType",
+            "type": "object",
+            "description": "Describes a tax domicile with validity period",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "taxDomicile": {                    
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CountryCodeType"
+                },
+                "dateFrom": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Start date of residence"
+                },
+                "dateTo": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "End date of residence"
+                }
+            },
+            "required": [
+                "taxDomicile",
+                "dateFrom",
+                "dateTo"
+            ]
+        },
+        "LegalFormPeriodType": {
+            "$id": "#/definitions/LegalFormPeriodType",
+            "type": "object",
+            "description": "Describes a legal form with validity period",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "legalFormType": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/LegalFormType"
+                },
+                "dateFrom": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Start date for legal form"
+                },
+                "dateTo": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "End date for legal form"
+                }
+            },
+            "required": [
+                "legalFormType",
+                "dateFrom",
+                "dateTo"
+            ]
+        },
+        "AffiliatedEntityType": {
+            "$id": "#/definitions/AffiliatedEntityType",
+            "type": "object",
+            "description": "Describes an affiliated entity",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "entityType": {
+                    "type": "string",
+                    "enum": [ "Betriebsstätte", "Kollektivgesellschaft", "Kommanditgesellschaft" ]
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the entity"
+                },
+                "address": {
+                    "type": "string",
+                    "description": "Address line of the location of the entity"
+                },
+                "postCode": {
+                    "$id": "common_types_schema.json#/definitions/ZipType",
+                    "description": "ZIP code of the entitiy's location"
+                },
+                "city": {
+                    "type": "string",
+                    "description": "City of the entitiy's location"
+                }
+            },
+            "required": [
+                "entityType",
+                "name",
+                "address",
+                "postCode",
+                "city"
+            ]
+        },
+        "EquityHoldingPersonType": {
+            "$id": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/EquityHoldingPersonType",
+            "type": "object",
+            "description": "Describes a person holding an equity with validity period",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "firstName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/FirstNameType"
+                },
+                "lastName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/LastNameType"
+                },
+                "address": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/AddressLineType"
+                },
+                "postCode": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/ZipType"
+                },
+                "city": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CityType"
+                },
+                "country": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CountryCodeType"
+                },
+                "quotePercentage": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/PercentageType"
+                }
+            },
+            "required": [
+                "firstName",
+                "lastName",
+                "address",
+                "postCode",
+                "city",
+                "country",
+                "quotePercentage"
+            ]
+        },
+        "DeceasedPersonType": {
+            "$id": "#/definitions/DeceasedPersonType",
+            "type": "object",
+            "description": "Describes a deceased person",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "firstName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/FirstNameType"
+                },
+                "lastName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/LastNameType"
+                },
+                "lastResidence": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/AddressLineType"
+                },
+                "deathDate": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/DeathDateType"
+                }
+            },
+            "required": [
+                "firstName",
+                "lastName",
+                "lastResidence",
+                "deathDate"
+            ]
+        },
+        "BeneficiaryPersonType": {
+            "$id": "#/definitions/BeneficiaryPersonType",
+            "type": "object",
+            "description": "Describes a beneficiary",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "firstName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/FirstNameType"
+                },
+                "lastName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/LastNameType"
+                },
+                "address": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/AddressLineType"
+                },
+                "postCode": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/ZipType"
+                },
+                "city": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CityType"
+                },
+                "country": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CountryCodeType"
+                },
+                "quotePercentage": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/PercentageType"
+                }
+            },
+            "required": [
+                "firstName",
+                "lastName",
+                "address",
+                "postCode",
+                "city",
+                "country",
+                "quotePercentage"
+            ]
+        },
+        "HolderPersonType": {
+            "$id": "#/definitions/HolderPersonType",
+            "type": "object",
+            "description": "Describes a holder of an asset",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "firstName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/FirstNameType"
+                },
+                "lastName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/LastNameType"
+                },
+                "address": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/AddressLineType"
+                },
+                "postCode": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/ZipType"
+                },
+                "city": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CityType"
+                },
+                "country": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CountryCodeType"
+                }
+            },
+            "required": [
+                "lastName",
+                "address",
+                "postCode",
+                "city",
+                "country"
+            ]
+        },
+        "AssetTitlesType": {
+            "$id": "#/definitions/AssetTitlesType",
+            "type": "object",
+            "description": "Describes the ratio of shares held by local and foreign entities",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "year": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/NumberType"
+                },
+		        "titlesDE": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/NumberType"
+                },		        
+		        "totalTitles": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/NumberType"
+                }
+            },
+            "required": [
+                "year",
+                "titlesDE",                
+                "totalTitles"
+            ]
+        }
+    }
+}

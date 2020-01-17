@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "delete_claim_output_schema.json",
+    "type": "object",
+    "description": "Schema eF85 MD Delete Claim Output",
+    "additionalProperties": false,
+    "properties": {
+        "success": {
+            "description": "Result of the operation",
+            "type": "boolean"
+        },
+        "claimID": {
+            "description": "ID of the deleted claim",
+            "type": "string"
+        },
+        "error": {
+            "oneOf": [
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+                    }
+                }
+            ]
+        }
+    },
+    "if": {
+        "properties": { "success": { "const": false } }
+    },
+    "then": {
+        "required": [
+            "success",
+            "error"
+        ]
+    },
+    "else": {
+        "required": [
+            "success",
+            "claimID"
+        ]
+    }
+}

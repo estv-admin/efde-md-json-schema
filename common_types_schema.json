@@ -1,0 +1,743 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "common_types_schema.json",
+    "type": "object",
+    "description": "Schema eF85 MD Common Types",
+    "additionalProperties": false,
+    "definitions": {
+        "CompanyType": {
+            "$id": "#/definitions/CompanyType",
+            "type": "string",
+            "description": "Name of company",
+            "default": "",
+            "examples": [
+                "ESTV"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "LegalFormType": {
+            "$id": "#/definitions/LegalFormType",
+            "description": "Legal form of an entity",
+            "oneOf": [
+                { "const": "NPE", "description": "Natürliches Person" },
+                { "const": "EUN", "description": "Einzelunternehmen" },
+                { "const": "EKF", "description": "eingetragene Kauffrau" },
+                { "const": "EKM", "description": "eingetragener Kaufmann" },
+                { "const": "OHG", "description": "Offene Handelsgesellschaft" },
+                { "const": "GOG", "description": "GmbH & Co. OHG" },
+                { "const": "AOG", "description": "AG & Co. OHG" },
+                { "const": "KGG", "description": "Kommanditgesellschaft" },
+                { "const": "GCG", "description": "GmbH & Co. KG" },
+                { "const": "AKG", "description": "AG & Co. KG" },
+                { "const": "OKG", "description": "OHG-KG" },
+                { "const": "UKG", "description": "Unternehmergesellschaft UG (haftungsbeschränkt) & Co. KG" },
+                { "const": "SKG", "description": "Stiftung & Co. KG" },
+                { "const": "SGG", "description": "Stiftung GmbH & Co. KG" },
+                { "const": "LLG", "description": "Limited Liability Company & Co. KG" },
+                { "const": "IKG", "description": "Investment-KG" },
+                { "const": "LCG", "description": "Limited & Co. KG" },
+                { "const": "PGG", "description": "Partnergesellschaft" },
+                { "const": "PGB", "description": "Partnergesellschaft mit beschränkter Berufshaftung" },
+                { "const": "STG", "description": "Stille Gesellschaft" },
+                { "const": "GBR", "description": "Gesellschaft des bürgerlichen Rechts" },
+                { "const": "AGA", "description": "Aktiengesellschaft" },
+                { "const": "GAG", "description": "Gemeinnützige Aktiengesellschaft" },
+                { "const": "IAG", "description": "Investmentaktiengesellschaft" },
+                { "const": "RAG", "description": "REIT- Aktiengesellschaft" },
+                { "const": "EAG", "description": "Europäische Aktiengesellschaft" },
+                { "const": "GBH", "description": "Gesellschaft mit beschränkter Haftung" },
+                { "const": "GGH", "description": "Gemeinnützige Gesellschaft mit beschränkter Haftung" },
+                { "const": "UGH", "description": "Unternehmergesellschaft (haftungsbeschränkt)" },
+                { "const": "KGA", "description": "Kommanditgesellschaft auf Aktien" },
+                { "const": "UGG", "description": "Unternehmergesellschaft" },
+                { "const": "EGS", "description": "Eingetragene Genossenschaft" },
+                { "const": "ARV", "description": "Altrechtlicher Verein" },
+                { "const": "EGV", "description": "Eingetragener Verein" },
+                { "const": "NEV", "description": "Nicht eingetragener Verein" },
+                { "const": "VEG", "description": "Versicherungsverein auf Gegenseitigkeit" },
+                { "const": "WIV", "description": "Wirtschaftlicher Verein" },
+                { "const": "STR", "description": "Stiftung des privaten Rechts" },
+                { "const": "KOR", "description": "Körperschaft des öffentlichen Rechts" },
+                { "const": "AOR", "description": "Anstalt des öffentlichen Rechts" },
+                { "const": "STO", "description": "Stiftung des öffentlichen Rechts" },
+                { "const": "REG", "description": "Regiebetrieb" },
+                { "const": "EIB", "description": "Eigenbetrieb" },
+                { "const": "ANF", "description": "Anlagefonds" },
+                { "const": "PUF", "description": "Publikumsfonds" },
+                { "const": "PUS", "description": "Publikums-Sondervermögen" },
+                { "const": "SPS", "description": "Spezial-Sondervermögen" },
+                { "const": "INF", "description": "Investmentfonds" },
+                { "const": "KCH", "description": "Kirche" },
+                { "const": "GEV", "description": "Gewerkschaft (sofern kein eingetragener Verein)" },
+                { "const": "PTP", "description": "Politische Partei (sofern kein eingetragener Verein)" },
+                { "const": "PRE", "description": "Partnerreederei" },
+                { "const": "ERB", "description": "Erbschaft" },
+                { "const": "ERG", "description": "Erbengemeinschaft" }
+            ]
+        },
+        "LegalPersonType": {
+            "$id": "#/definitions/LegalPersonType",
+            "type": "object",
+            "description": "Legal person",
+            "default": null,
+            "additionalProperties": false,
+            "required": [
+                "type",
+                "company",
+                "entityForm"
+            ],
+            "properties": {
+                "type": {
+                    "enum": [ "legal" ]
+                },
+                "company": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CompanyType"
+                },
+                "entityForm": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/LegalFormType"
+                }
+            }
+        },
+        "FirstNameType": {
+            "$id": "#/definitions/FirstNameType",
+            "type": "string",
+            "description": "Firstname of a person",
+            "default": "",
+            "examples": [
+                "Meier"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "LastNameType": {
+            "$id": "#/definitions/LastNameType",
+            "type": "string",
+            "description": "Lastname of a person",
+            "default": "",
+            "examples": [
+                "Alexander"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "BirthDateType": {
+            "$id": "#/definitions/BirthDateType",
+            "type": "string",
+            "description": "Birth date of a person",
+            "default": "",
+            "examples": [
+                "1999-06-30"
+            ],
+            "format": "date"
+        },
+        "DeathDateType": {
+            "$id": "#/definitions/DeathDateType",
+            "type": "string",
+            "description": "Death date of a person",
+            "default": "",
+            "examples": [
+                "2016-02-29"
+            ],
+            "format": "date"
+        },
+        "MailType": {
+            "$id": "#/definitions/MailType",
+            "type": "string",
+            "format": "email",
+            "description": "An email",
+            "default": "",
+            "examples": [
+                "alexander.meier@yopmail.com"
+            ]
+        },
+        "PhoneNumberType": {
+            "$id": "#/definitions/PhoneNumberType",
+            "type": "string",
+            "description": "A phone number",
+            "default": "",
+            "examples": [
+                "+41791234567"
+            ]
+        },
+        "NaturalPersonType": {
+            "$id": "#/definitions/NaturalPersonType",
+            "type": "object",
+            "description": "Natural person",
+            "default": null,
+            "additionalProperties": false,
+            "required": [
+                "type",
+                "firstName",
+                "lastName",
+                "birthDate"
+            ],
+            "properties": {
+                "type": { "enum": [ "natural" ] },
+                "firstName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/FirstNameType"
+                },
+                "lastName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/LastNameType"
+                },
+                "birthDate": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/BirthDateType"
+                }
+            }
+        },
+        "AddressLineType": {
+            "$id": "#/definitions/AddressLineType",
+            "type": "string",
+            "description": "Line of an address",
+            "default": "",
+            "examples": [
+                "Buchenweg 10"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "StreetType": {
+            "$id": "#/definitions/StreetType",
+            "type": "string",
+            "description": "Street of address",
+            "default": "",
+            "examples": [
+                "Buchenweg"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "HouseNumberType": {
+            "$id": "#/definitions/HouseNumberType",
+            "type": "string",
+            "description": "House number of address",
+            "default": "",
+            "examples": [
+                "10"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "ZipType": {
+            "$id": "#/definitions/ZipType",
+            "allOf": [
+                { "type": "string" },
+                { "maxLength": 20 },
+                { "minLength": 3 }
+            ],
+            "description": "Zip of an address",
+            "default": "",
+            "examples": [
+                "3012"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "CityType": {
+            "$id": "#/definitions/CityType",
+            "allOf": [
+                { "type": "string" },
+                { "minLength": 2 }
+            ],
+            "description": "City of an address",
+            "default": "",
+            "examples": [
+                "Bern"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "CountryCodeType": {
+            "$id": "#/definitions/CountryCodeType",
+            "oneOf": [
+                { "const": "AD", "description": "Andorra" },
+                { "const": "AE", "description": "United Arab Emirates" },
+                { "const": "AF", "description": "Afghanistan" },
+                { "const": "AG", "description": "Antigua and Barbuda" },
+                { "const": "AI", "description": "Anguilla" },
+                { "const": "AL", "description": "Albania" },
+                { "const": "AM", "description": "Armenia" },
+                { "const": "AO", "description": "Angola" },
+                { "const": "AQ", "description": "Antarctica" },
+                { "const": "AR", "description": "Argentina" },
+                { "const": "AS", "description": "American Samoa" },
+                { "const": "AT", "description": "Austria" },
+                { "const": "AU", "description": "Australia" },
+                { "const": "AW", "description": "Aruba" },
+                { "const": "AX", "description": "Åland Islands" },
+                { "const": "AZ", "description": "Azerbaijan" },
+                { "const": "BA", "description": "Bosnia and Herzegovina" },
+                { "const": "BB", "description": "Barbados" },
+                { "const": "BD", "description": "Bangladesh" },
+                { "const": "BE", "description": "Belgium" },
+                { "const": "BF", "description": "Burkina Faso" },
+                { "const": "BG", "description": "Bulgaria" },
+                { "const": "BH", "description": "Bahrain" },
+                { "const": "BI", "description": "Burundi" },
+                { "const": "BJ", "description": "Benin" },
+                { "const": "BL", "description": "Saint Barthélemy" },
+                { "const": "BM", "description": "Bermuda" },
+                { "const": "BN", "description": "Brunei Darussalam" },
+                { "const": "BO", "description": "Bolivia (Plurinational State of)" },
+                { "const": "BQ", "description": "Bonaire, Sint Eustatius and Saba" },
+                { "const": "BR", "description": "Brazil" },
+                { "const": "BS", "description": "Bahamas" },
+                { "const": "BT", "description": "Bhutan" },
+                { "const": "BV", "description": "Bouvet Island" },
+                { "const": "BW", "description": "Botswana" },
+                { "const": "BY", "description": "Belarus" },
+                { "const": "BZ", "description": "Belize" },
+                { "const": "CA", "description": "Canada" },
+                { "const": "CC", "description": "Cocos (Keeling) Islands" },
+                { "const": "CD", "description": "Congo, Democratic Republic of the" },
+                { "const": "CF", "description": "Central African Republic" },
+                { "const": "CG", "description": "Congo" },
+                { "const": "CH", "description": "Switzerland" },
+                { "const": "CI", "description": "Côte d'Ivoire" },
+                { "const": "CK", "description": "Cook Islands" },
+                { "const": "CL", "description": "Chile" },
+                { "const": "CM", "description": "Cameroon" },
+                { "const": "CN", "description": "China" },
+                { "const": "CO", "description": "Colombia" },
+                { "const": "CR", "description": "Costa Rica" },
+                { "const": "CU", "description": "Cuba" },
+                { "const": "CV", "description": "Cabo Verde" },
+                { "const": "CW", "description": "Curaçao" },
+                { "const": "CX", "description": "Christmas Island" },
+                { "const": "CY", "description": "Cyprus" },
+                { "const": "CZ", "description": "Czechia" },
+                { "const": "DE", "description": "Germany" },
+                { "const": "DJ", "description": "Djibouti" },
+                { "const": "DK", "description": "Denmark" },
+                { "const": "DM", "description": "Dominica" },
+                { "const": "DO", "description": "Dominican Republic" },
+                { "const": "DZ", "description": "Algeria" },
+                { "const": "EC", "description": "Ecuador" },
+                { "const": "EE", "description": "Estonia" },
+                { "const": "EG", "description": "Egypt" },
+                { "const": "EH", "description": "Western Sahara" },
+                { "const": "ER", "description": "Eritrea" },
+                { "const": "ES", "description": "Spain" },
+                { "const": "ET", "description": "Ethiopia" },
+                { "const": "FI", "description": "Finland" },
+                { "const": "FJ", "description": "Fiji" },
+                { "const": "FK", "description": "Falkland Islands (Malvinas)" },
+                { "const": "FM", "description": "Micronesia (Federated States of)" },
+                { "const": "FO", "description": "Faroe Islands" },
+                { "const": "FR", "description": "France" },
+                { "const": "GA", "description": "Gabon" },
+                { "const": "GB", "description": "United Kingdom of Great Britain and Northern Ireland" },
+                { "const": "GD", "description": "Grenada" },
+                { "const": "GE", "description": "Georgia" },
+                { "const": "GF", "description": "French Guiana" },
+                { "const": "GG", "description": "Guernsey" },
+                { "const": "GH", "description": "Ghana" },
+                { "const": "GI", "description": "Gibraltar" },
+                { "const": "GL", "description": "Greenland" },
+                { "const": "GM", "description": "Gambia" },
+                { "const": "GN", "description": "Guinea" },
+                { "const": "GP", "description": "Guadeloupe" },
+                { "const": "GQ", "description": "Equatorial Guinea" },
+                { "const": "GR", "description": "Greece" },
+                { "const": "GS", "description": "South Georgia and the South Sandwich Islands" },
+                { "const": "GT", "description": "Guatemala" },
+                { "const": "GU", "description": "Guam" },
+                { "const": "GW", "description": "Guinea-Bissau" },
+                { "const": "GY", "description": "Guyana" },
+                { "const": "HK", "description": "Hong Kong" },
+                { "const": "HM", "description": "Heard Island and McDonald Islands" },
+                { "const": "HN", "description": "Honduras" },
+                { "const": "HR", "description": "Croatia" },
+                { "const": "HT", "description": "Haiti" },
+                { "const": "HU", "description": "Hungary" },
+                { "const": "ID", "description": "Indonesia" },
+                { "const": "IE", "description": "Ireland" },
+                { "const": "IL", "description": "Israel" },
+                { "const": "IM", "description": "Isle of Man" },
+                { "const": "IN", "description": "India" },
+                { "const": "IO", "description": "British Indian Ocean Territory" },
+                { "const": "IQ", "description": "Iraq" },
+                { "const": "IR", "description": "Iran (Islamic Republic of)" },
+                { "const": "IS", "description": "Iceland" },
+                { "const": "IT", "description": "Italy" },
+                { "const": "JE", "description": "Jersey" },
+                { "const": "JM", "description": "Jamaica" },
+                { "const": "JO", "description": "Jordan" },
+                { "const": "JP", "description": "Japan" },
+                { "const": "KE", "description": "Kenya" },
+                { "const": "KG", "description": "Kyrgyzstan" },
+                { "const": "KH", "description": "Cambodia" },
+                { "const": "KI", "description": "Kiribati" },
+                { "const": "KM", "description": "Comoros" },
+                { "const": "KN", "description": "Saint Kitts and Nevis" },
+                { "const": "KP", "description": "Korea (Democratic People's Republic of)" },
+                { "const": "KR", "description": "Korea, Republic of" },
+                { "const": "KW", "description": "Kuwait" },
+                { "const": "KY", "description": "Cayman Islands" },
+                { "const": "KZ", "description": "Kazakhstan" },
+                { "const": "LA", "description": "Lao People's Democratic Republic" },
+                { "const": "LB", "description": "Lebanon" },
+                { "const": "LC", "description": "Saint Lucia" },
+                { "const": "LI", "description": "Liechtenstein" },
+                { "const": "LK", "description": "Sri Lanka" },
+                { "const": "LR", "description": "Liberia" },
+                { "const": "LS", "description": "Lesotho" },
+                { "const": "LT", "description": "Lithuania" },
+                { "const": "LU", "description": "Luxembourg" },
+                { "const": "LV", "description": "Latvia" },
+                { "const": "LY", "description": "Libya" },
+                { "const": "MA", "description": "Morocco" },
+                { "const": "MC", "description": "Monaco" },
+                { "const": "MD", "description": "Moldova, Republic of" },
+                { "const": "ME", "description": "Montenegro" },
+                { "const": "MF", "description": "Saint Martin (French part)" },
+                { "const": "MG", "description": "Madagascar" },
+                { "const": "MH", "description": "Marshall Islands" },
+                { "const": "MK", "description": "North Macedonia" },
+                { "const": "ML", "description": "Mali" },
+                { "const": "MM", "description": "Myanmar" },
+                { "const": "MN", "description": "Mongolia" },
+                { "const": "MO", "description": "Macao" },
+                { "const": "MP", "description": "Northern Mariana Islands" },
+                { "const": "MQ", "description": "Martinique" },
+                { "const": "MR", "description": "Mauritania" },
+                { "const": "MS", "description": "Montserrat" },
+                { "const": "MT", "description": "Malta" },
+                { "const": "MU", "description": "Mauritius" },
+                { "const": "MV", "description": "Maldives" },
+                { "const": "MW", "description": "Malawi" },
+                { "const": "MX", "description": "Mexico" },
+                { "const": "MY", "description": "Malaysia" },
+                { "const": "MZ", "description": "Mozambique" },
+                { "const": "NA", "description": "Namibia" },
+                { "const": "NC", "description": "New Caledonia" },
+                { "const": "NE", "description": "Niger" },
+                { "const": "NF", "description": "Norfolk Island" },
+                { "const": "NG", "description": "Nigeria" },
+                { "const": "NI", "description": "Nicaragua" },
+                { "const": "NL", "description": "Netherlands" },
+                { "const": "NO", "description": "Norway" },
+                { "const": "NP", "description": "Nepal" },
+                { "const": "NR", "description": "Nauru" },
+                { "const": "NU", "description": "Niue" },
+                { "const": "NZ", "description": "New Zealand" },
+                { "const": "OM", "description": "Oman" },
+                { "const": "PA", "description": "Panama" },
+                { "const": "PE", "description": "Peru" },
+                { "const": "PF", "description": "French Polynesia" },
+                { "const": "PG", "description": "Papua New Guinea" },
+                { "const": "PH", "description": "Philippines" },
+                { "const": "PK", "description": "Pakistan" },
+                { "const": "PL", "description": "Poland" },
+                { "const": "PM", "description": "Saint Pierre and Miquelon" },
+                { "const": "PN", "description": "Pitcairn" },
+                { "const": "PR", "description": "Puerto Rico" },
+                { "const": "PS", "description": "Palestine, State of" },
+                { "const": "PT", "description": "Portugal" },
+                { "const": "PW", "description": "Palau" },
+                { "const": "PY", "description": "Paraguay" },
+                { "const": "QA", "description": "Qatar" },
+                { "const": "RE", "description": "Réunion" },
+                { "const": "RO", "description": "Romania" },
+                { "const": "RS", "description": "Serbia" },
+                { "const": "RU", "description": "Russian Federation" },
+                { "const": "RW", "description": "Rwanda" },
+                { "const": "SA", "description": "Saudi Arabia" },
+                { "const": "SB", "description": "Solomon Islands" },
+                { "const": "SC", "description": "Seychelles" },
+                { "const": "SD", "description": "Sudan" },
+                { "const": "SE", "description": "Sweden" },
+                { "const": "SG", "description": "Singapore" },
+                { "const": "SH", "description": "Saint Helena, Ascension and Tristan da Cunha" },
+                { "const": "SI", "description": "Slovenia" },
+                { "const": "SJ", "description": "Svalbard and Jan Mayen" },
+                { "const": "SK", "description": "Slovakia" },
+                { "const": "SL", "description": "Sierra Leone" },
+                { "const": "SM", "description": "San Marino" },
+                { "const": "SN", "description": "Senegal" },
+                { "const": "SO", "description": "Somalia" },
+                { "const": "SR", "description": "Suriname" },
+                { "const": "SS", "description": "South Sudan" },
+                { "const": "ST", "description": "Sao Tome and Principe" },
+                { "const": "SV", "description": "El Salvador" },
+                { "const": "SX", "description": "Sint Maarten (Dutch part)" },
+                { "const": "SY", "description": "Syrian Arab Republic" },
+                { "const": "SZ", "description": "Eswatini" },
+                { "const": "TC", "description": "Turks and Caicos Islands" },
+                { "const": "TD", "description": "Chad" },
+                { "const": "TF", "description": "French Southern Territories" },
+                { "const": "TG", "description": "Togo" },
+                { "const": "TH", "description": "Thailand" },
+                { "const": "TJ", "description": "Tajikistan" },
+                { "const": "TK", "description": "Tokelau" },
+                { "const": "TL", "description": "Timor-Leste" },
+                { "const": "TM", "description": "Turkmenistan" },
+                { "const": "TN", "description": "Tunisia" },
+                { "const": "TO", "description": "Tonga" },
+                { "const": "TR", "description": "Turkey" },
+                { "const": "TT", "description": "Trinidad and Tobago" },
+                { "const": "TV", "description": "Tuvalu" },
+                { "const": "TW", "description": "Taiwan, Province of China" },
+                { "const": "TZ", "description": "Tanzania, United Republic of" },
+                { "const": "UA", "description": "Ukraine" },
+                { "const": "UG", "description": "Uganda" },
+                { "const": "UM", "description": "United States Minor Outlying Islands" },
+                { "const": "US", "description": "United States of America" },
+                { "const": "UY", "description": "Uruguay" },
+                { "const": "UZ", "description": "Uzbekistan" },
+                { "const": "VA", "description": "Holy See" },
+                { "const": "VC", "description": "Saint Vincent and the Grenadines" },
+                { "const": "VE", "description": "Venezuela (Bolivarian Republic of)" },
+                { "const": "VG", "description": "Virgin Islands (British)" },
+                { "const": "VI", "description": "Virgin Islands (U.S.)" },
+                { "const": "VN", "description": "Viet Nam" },
+                { "const": "VU", "description": "Vanuatu" },
+                { "const": "WF", "description": "Wallis and Futuna" },
+                { "const": "WS", "description": "Samoa" },
+                { "const": "YE", "description": "Yemen" },
+                { "const": "YT", "description": "Mayotte" },
+                { "const": "ZA", "description": "South Africa" },
+                { "const": "ZM", "description": "Zambia" },
+                { "const": "ZW", "description": "Zimbabwe" }
+            ],
+            "description": "Country code ISO 3166-1 alpha-2",
+            "default": "",
+            "examples": [
+                "CH"
+            ]
+        },
+        "TaxIdNumberType": {
+            "$id": "#/definitions/TaxIdNumberType",
+            "type": "string",
+            "description": "Steuerliche Identifikationsnummer / Steuer-IdNr / https://de.wikipedia.org/wiki/Steuerliche_Identifikationsnummer",
+            "default": "",
+            "examples": [
+                "12345678901"
+            ],
+            "oneOf": [
+                { "pattern": "^\\d{11}$" },
+                { "maxLength": 0 }
+            ]
+        },
+        "TaxNumberType": {
+            "$id": "#/definitions/TaxNumberType",
+            "allOf": [
+                { "type": "string" },
+                { "maxLength": 13 }
+            ],
+            "description": "Steuernummer / St.-Nr. / https://de.wikipedia.org/wiki/Steuernummer",
+            "default": "",
+            "examples": [
+                "1234567890123"
+            ]
+        },
+        "UStIDNrType": {
+            "$id": "#/definitions/UStIDNrType",
+            "type": "string",
+            "description": "Umsatzsteuer-Identifikationsnummer / USt-IdNr / https://de.wikipedia.org/wiki/Umsatzsteuer-Identifikationsnummer",
+            "default": "",
+            "examples": [
+                "DE123456789"
+            ],
+            "oneOf": [
+                { "pattern": "^DE\\d{9}$" },
+                { "maxLength": 0 }
+            ]
+        },
+        "WIDNrType": {
+            "$id": "#/definitions/WIDNrType",
+            "type": "string",
+            "description": "Wirtschafts-Identifikationsnummer / W-IdNr / https://de.wikipedia.org/wiki/Wirtschafts-Identifikationsnummer http://www.bzst.de/DE/Unternehmen/Identifikationsnummern/Wirtschaftsidentifikationsnummer/wirtschaftsidentifikationsnummer.html",
+            "default": "",
+            "examples": [
+                "DE123456789"
+            ],
+            "oneOf": [
+                { "pattern": "^DE\\d{9}$" },
+                { "maxLength": 0 }
+            ]
+        },
+        "TaxIdNaturalType": {
+            "$id": "#/definitions/TaxIdNaturalType",
+            "type": "object",
+            "description": "Set of tax identification numbers",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "taxIdNumber": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/TaxIdNumberType"
+                },
+                "taxNumber": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/TaxNumberType"
+                }
+            },
+            "anyOf": [
+                { 
+                    "required": [ 
+                        "taxIdNumber" 
+                    ] 
+                },
+                { 
+                    "required": [ 
+                        "taxNumber" 
+                    ] 
+                }
+            ]            
+        },
+        "TaxIdLegalType": {
+            "$id": "#/definitions/TaxIdLegalType",
+            "type": "object",
+            "description": "Set of tax identification numbers",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "taxNumber": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/TaxNumberType"
+                },
+                "uStIDNr": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UStIDNrType"
+                },
+                "wIDNr": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/WIDNrType"
+                }
+            },
+            "anyOf": [
+                { 
+                    "required": [ 
+                        "taxNumber" 
+                    ] 
+                },
+                { 
+                    "required": [ 
+                        "uStIDNr" 
+                    ] 
+                },
+                { 
+                    "required": [ 
+                        "wIDNr" 
+                    ] 
+                }
+            ]
+        },
+        "EstvIdType": {
+            "$id": "#/definitions/EstvIdType",
+            "type": "string",
+            "description": "ESTV ID",
+            "default": "",
+            "examples": [
+                "123.4321.9876"
+            ],
+            "pattern": "^052.\\d\\d\\d\\d\\.\\d\\d\\d\\d$"
+        },
+        "LegalCityType": {
+            "$id": "#/definitions/LegalCityType",
+            "type": "string",
+            "description": "Legal City of a claimee",
+            "default": "",
+            "examples": [
+                "Berlin",
+                "Duisburg"
+            ]
+        },
+        "FileNumberType": {
+            "$id": "#/definitions/FileNumberType",
+            "type": "string",
+            "description": "Dossiernummer",
+            "default": "",
+            "examples": [
+                "dossiernr123"
+            ],
+            "pattern": "^(.*)$"
+        },
+        "IbanType": {
+            "$id": "#/definitions/IbanType",
+            "type": "string",
+            "description": "IBAN ",
+            "default": "",
+            "examples": [
+                "DE27100777770209299700"
+            ],
+            "pattern": "^[A-Z]{2}\\d{10,34}$"
+        },
+        "InstitutionNameType": {
+            "$id": "#/definitions/InstitutionNameType",
+            "type": "string",
+            "minLength": 1,
+            "description": "Name of an institution"
+        },
+        "AcquiredDateType": {
+            "$id": "#/definitions/AcquiredDateType",
+            "type": "string",
+            "description": "Typically a value date",
+            "format": "date"
+        },
+        "DueDateType": {
+            "$id": "#/definitions/DueDateType",
+            "type": "string",
+            "description": "Typically a value date",
+            "format": "date"
+        },
+        "RefundRateType": {
+            "$id": "#/definitions/RefundRateType",
+            "oneOf": [
+                { "const": 15 },
+                { "const": 20 },
+                { "const": 30 },
+                { "const": 35 }
+            ],
+            "description": "Rate of the refund - can be either 15, 20, 30 or 35%"
+        },
+        "PercentageType": {
+            "$id": "#/definitions/PercentageType",
+            "allOf": [
+                { "type": "number" },
+                { "minimum": 0 },
+                { "maximum": 100 }
+            ],
+            "description": "Percentage - a value between 0 and 100"
+        },
+        "NumberType": {
+            "$id": "#/definitions/NumberType",
+            "type": "number",
+            "description": "A number"
+        },
+        "UIDType": {
+            "$id": "#/definitions/UIDType",
+            "type": "string",
+            "description": "ID for Swiss corporations",
+            "default": "",
+            "examples": [
+                "CHE-107.980.915"
+            ],
+            "pattern": "^CHE\\-\\d{3}\\.\\d{3}\\.\\d{3}$"
+        },
+        "UUIDType": {
+            "$id": "#/definitions/UUIDType",
+            "type": "string",
+            "description": "UUID based on RFC 4122 as string in the form xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "default": "",
+            "examples": [
+                "5E99AA79-7446-409C-A549-A34680D73C52", "123e4567-e89b-12d3-a456-426655440000"
+            ],
+            "pattern": "^[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}$"
+        },
+        "Base64EncodedDocumentType": {
+            "$id": "#/definitions/Base64EncodedDocumentType",
+            "type": "object",
+            "description": "Base64 encoded file",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "fileName": {
+                    "type": "string",
+                    "description": "Name of the file including file extension"
+                },
+                "mimeType": {
+                    "type": "string",
+                    "description": "MIME type of the content, see here https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types"
+                },
+                "fileBytes": {
+                    "type": "string",
+                    "description": "Base64 encoded content of the file"
+                }
+            },
+            "required": [
+                "fileName",
+                "mimeType",
+                "fileBytes"
+            ]
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "download_stamp_sheet_output_schema.json",
+    "type": "object",
+    "description": "Schema eF85 MD Download Stamp Sheet Output",
+    "additionalProperties": false,
+    "properties": {
+        "success": {
+            "description": "Result of the operation",
+            "type": "boolean"
+        },
+        "stampSheetDocument": {
+            "description": "Stamp sheet in the form of a base64-encoded PDF document",
+            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/Base64EncodedDocumentType"
+        },
+        "error": {
+            "type": "array",
+            "items": {
+                "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+            }
+        }
+    },
+    "if": {
+        "properties": { "success": { "const": false } }
+    },
+    "then": {
+        "required": [
+            "success",
+            "error"
+        ]
+    },
+    "else": {
+        "required": [
+            "success",
+            "stampSheetDocument"
+        ]
+    }
+}

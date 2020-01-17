@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "update_partner_input_schema.json",
+    "type": "object",
+    "description": "Schema eF85 MD Update Partner Input",
+    "additionalProperties": false,
+    "properties": {
+        "estvID": {
+            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/EstvIdType"
+        },
+        "person": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": { "const": "natural" },
+                "firstName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/FirstNameType"
+                },
+                "lastName": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/LastNameType"
+                }
+            }
+        },
+        "street": {
+            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/StreetType"
+        },
+        "houseNumber": {
+            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/HouseNumberType"
+        },
+        "zip": {
+            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/ZipType"
+        },
+        "city": {
+            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CityType"
+        },
+        "state": {
+            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CountryCodeType"
+        },
+        "taxId": {
+            "description": "Tax Identifiers of legal or natural person",
+            "oneOf": [
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/TaxIdNaturalType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/TaxIdLegalType"
+                }
+            ]
+        }
+    },
+    "if": {
+        "properties": { "person": { "properties": { "type": { "const": "legal" } } } }
+    },
+    "then": {
+        "properties": { 
+            "taxId": { 
+                "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/TaxIdLegalType"
+            } 
+        }
+    },
+    "else": {
+        "properties": {
+            "taxId": {
+                "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/TaxIdNaturalType"
+            }
+        }
+    },
+    "required": [
+        "estvID"
+    ]
+}

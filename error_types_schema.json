@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "error_types_schema.json",
+    "type": "object",
+    "description": "Schema eF85 MD Common Types",
+    "additionalProperties": false,
+    "definitions": {
+        "OutputErrorCodeType": {
+            "$id": "#/definitions/OutputErrorCodeType",
+            "type": "string",
+            "description": "Error code is zero if operation succeeded and 'success' property is true otherwise it is bigger than zero if operation failed and 'success' property is false",
+            "examples": [
+                "-1",
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        },
+        "OutputErrorReferenceIDType": {
+            "$id": "#/definitions/OutputErrorReferenceIDType",
+            "type": "string",
+            "description": "Error reference ID or string of a question",
+            "examples": [
+                "-1",
+                "16c7631c-f5a8-11e9-802a-5aa538984bd8"
+            ]
+        },
+        "OutputErrorDescriptionType": {
+            "$id": "#/definitions/OutputErrorDescription",
+            "type": "string",
+            "description": "Description related to a specific error code",
+            "examples": [
+                "Validation error"
+            ]
+        },
+        "OutputErrorType": {
+            "$id": "#/definitions/OutputErrorType",
+            "type": "object",
+            "description": "Set of tax identification numbers",
+            "default": null,
+            "additionalProperties": false,
+            "properties": {
+                "errorCode": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorCodeType"
+                },
+                "errorDescription": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorDescriptionType"
+                },
+                "errorReferenceID": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorReferenceIDType"
+                }
+            },
+            "required": [
+                "errorCode"
+            ]
+        }
+    }
+}

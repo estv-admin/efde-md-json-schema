@@ -1,0 +1,299 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "claim_questionary_sequence_types_schema.json",
+    "type": "object",
+    "description": "Schema eF85 MD Common Types",
+    "additionalProperties": false,
+    "definitions": {
+        "questionarySequence01Type": {
+            "$id": "#/definitions/questionarySequence01Type",
+            "description": "List of questions first case - natural persons",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question06Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                }
+            ],
+            "additionalItems": {
+                "anyOf": [
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                    },
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                    }
+                ]
+            }
+        },
+        "questionarySequence02Type": {
+            "$id": "#/definitions/questionarySequence02Type",
+            "description": "List of questions second case - legal persons",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question07Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                }
+            ],
+            "additionalItems": {
+                "anyOf": [
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                    },
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                    }
+                ]
+            }
+        },
+        "questionarySequence03Type": {
+            "$id": "#/definitions/questionarySequence03Type",
+            "description": "List of questions third case - legal persons with additional F8",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question07Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question08Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                }
+            ],
+            "additionalItems": {
+                "anyOf": [
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                    },
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                    }
+                ]
+            }
+        },
+        "questionarySequence04Type": {
+            "$id": "#/definitions/questionarySequence04Type",
+            "description": "List of questions of fourth case - legal persons with additional F9",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question07Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question09Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                }
+            ],
+            "additionalItems": {
+                "anyOf": [
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                    },
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                    }
+                ]
+            }
+        },
+        "questionarySequence05Type": {
+            "$id": "#/definitions/questionarySequence05Type",
+            "description": "List of questions fifth case - legal persons with F10 instead of F7",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question10Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                }
+            ],
+            "additionalItems": {
+                "anyOf": [
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                    },
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                    }
+                ]
+            }
+        },
+        "questionarySequence06Type": {
+            "$id": "#/definitions/questionarySequence06Type",
+            "description": "List of questions sixth case - legal persons with additional F12",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question07Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question12Type"
+                }
+            ],
+            "additionalItems": {
+                "anyOf": [
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                    },
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                    }
+                ]
+            }
+        },
+        "questionarySequence07Type": {
+            "$id": "#/definitions/questionarySequence07Type",
+            "description": "List of questions seventh case - legal persons with additional F13",
+            "type": "array",
+            "items": [
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question07Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                },
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question13Type"
+                }
+            ],
+            "additionalItems": {
+                "anyOf": [
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                    },
+                    {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                    }
+                ]
+            }
+        }
+    }
+}

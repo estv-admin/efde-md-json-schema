@@ -1,0 +1,246 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "create_claim_input_schema.json",
+    "type": "object",
+    "description": "Schema eF85 MD New Claim Input",
+    "additionalProperties": false,
+    "properties": {
+        "estvID": {
+            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/EstvIdType"
+        },
+        "legalFormType": {
+            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/LegalFormType"
+        },
+        "legalCity": {
+            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/LegalCityType"
+        },
+        "claimYears": {
+            "description": "List of years of a claim",
+            "type": "array",
+            "items": {
+                "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/ClaimYearType"
+            },
+            "minItems": 1,
+            "maxItems": 4,
+            "uniqueItems": true
+        },
+        "securities": {
+            "description": "List of securities",
+            "type": "array",
+            "items": {
+                "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/ClaimSecurityType"
+            }
+        },
+        "accounts": {
+            "description": "List of accounts",
+            "type": "array",
+            "items": {
+                "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/ClaimAccountType"
+            }
+        },
+        "monetaries": {
+            "description": "List of monetaries",
+            "type": "array",
+            "items": {
+                "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/ClaimMonetaryType"
+            }
+        },
+        "questionary": {
+            "description": "List of questions",
+            "anyOf": [
+                {
+                    "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence01Type"
+                },
+                {
+                    "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence02Type"
+                },
+                {
+                    "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence03Type"
+                },
+                {
+                    "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence04Type"
+                },
+                {
+                    "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence05Type"
+                },
+                {
+                    "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence06Type"
+                },
+                {
+                    "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence07Type"
+                }
+            ]
+        },
+        "paymentInformation": {
+            "description": "Payment information for a claim",
+            "type": "object",
+            "properties": {
+                "IBAN": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/IbanType"
+                },
+                "accountHolderName": {
+                    "type": "string",
+                    "description": "Name of the account holder"
+                }
+            },
+            "required": [
+                "IBAN",
+                "accountHolderName"
+            ]
+        },
+        "contactInformation": {
+            "description": "Contact information for a claim",
+            "type": "object",
+            "properties": {
+                "phoneNumber": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/PhoneNumberType"
+                },
+                "eMail": {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/MailType"
+                }
+            },
+            "required": [
+                "phoneNumber",
+                "eMail"
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "legalFormType": {
+                        "type": "string",
+                        "enum": [ "NPE" ]
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "questionary": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence01Type"
+                    }
+                }
+            },
+            "else": true
+        },
+        {
+            "if": {
+                "properties": {
+                    "legalFormType": {
+                        "type": "string",
+                        "enum": [ "EUN", "EKF", "EKM", "PGG", "PGB", "STG", "AGA", "GAG", "IAG", "RAG", "EAG", "GBH", "GGH", "UGH", "KGA", "UGG", "EGS", "ARV", "EGV", "NEV", "VEG", "WIV", "KOR", "INF", "KCH", "GEV", "PTP", "PRE", "ERB", "EBG" ]
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "questionary": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence02Type"
+                    }
+                }
+            },
+            "else": true
+        },
+        {
+            "if": {
+                "properties": {
+                    "legalFormType": {
+                        "type": "string",
+                        "enum": [ "OHG", "GOG", "AOG", "KGG", "GCG", "AKG", "OKG", "UKG", "SKG", "SGG", "LLG", "IKG", "LCG" ]
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "questionary": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence03Type"
+                    }
+                }
+            },
+            "else": true
+        },
+        {
+            "if": {
+                "properties": {
+                    "legalFormType": {
+                        "type": "string",
+                        "enum": [ "GBR" ]
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "questionary": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence04Type"
+                    }
+                }
+            },
+            "else": true
+        },
+        {
+            "if": {
+                "properties": {
+                    "legalFormType": {
+                        "type": "string",
+                        "enum": ["AOR", "STO", "STR"]
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "questionary": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence05Type"
+                    }
+                }
+            },
+            "else": true
+        },
+        {
+            "if": {
+                "properties": {
+                    "legalFormType": {
+                        "type": "string",
+                        "enum": [ "ANF", "PUF", "PUS", "INF" ]
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "questionary": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence06Type"
+                    }
+                }
+            },
+            "else": true
+        },
+        {
+            "if": {
+                "properties": {
+                    "legalFormType": {
+                        "type": "string",
+                        "enum": [ "SPS" ]
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "questionary": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence07Type"
+                    }
+                }
+            },
+            "else": true
+        }
+    ],
+    "required": [
+        "legalFormType",
+        "estvID",
+        "securities",
+        "accounts",
+        "monetaries",
+        "questionary",
+        "paymentInformation",
+        "contactInformation"
+    ]
+}

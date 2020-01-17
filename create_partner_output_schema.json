@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "create_partner_output_schema.json",
+    "type": "object",
+    "description": "Schema eF85 MD Create Partner Output",
+    "additionalProperties": false,
+    "properties": {
+        "success": {
+            "description": "Result of the operation",
+            "type": "boolean"
+        },
+        "estvID": {
+            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/EstvIdType",
+            "description": "ESTV ID of newly created partner - only present if 'success' property is true"
+        },
+        "error": {
+            "oneOf": [
+                {
+                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+                    }
+                }
+            ]
+        }
+    },
+    "if": {
+        "properties": { "success": { "const": false } }
+    },
+    "then": {
+        "required": [
+            "success",
+            "error"
+        ]
+    },
+    "else": {
+        "required": [
+            "success",
+            "estvID"
+        ]
+    }
+}
