@@ -16,17 +16,17 @@
                     "const": "F1"
                 },
                 "answer": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AnswerType"
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "if": {
@@ -66,17 +66,17 @@
                     "const": "F2"
                 },
                 "answer": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AnswerType"
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "if": {
@@ -116,17 +116,17 @@
                     "const": "F2A"
                 },
                 "answer": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AnswerType"
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "if": {
@@ -166,17 +166,17 @@
                     "const": "F2B"
                 },
                 "answer": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AnswerType"
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "if": {
@@ -224,23 +224,23 @@
                     "const": "F3"
                 },
                 "answer": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AnswerType"
                 },
                 "taxDomicilePeriod": {
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/TaxDomicilePeriodType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/TaxDomicilePeriodType"
                     }
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "if": {
@@ -288,7 +288,7 @@
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "required": [
@@ -308,23 +308,23 @@
                     "const": "F5A"
                 },
                 "answer": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AnswerType"
                 },
                 "affiliatedEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AffiliatedEntityType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AffiliatedEntityType"
                     }
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "if": {
@@ -378,23 +378,23 @@
                     "const": "F5B"
                 },
                 "answer": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AnswerType"
                 },
                 "affiliatedEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AffiliatedEntityType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AffiliatedEntityType"
                     }
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "if": {
@@ -448,17 +448,17 @@
                     "const": "F6"
                 },
                 "answer": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AnswerType"
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "if": {
@@ -498,17 +498,17 @@
                     "const": "F7"
                 },
                 "answer": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AnswerType"
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "required": [
@@ -535,7 +535,7 @@
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "required": [
@@ -564,18 +564,18 @@
                 "affiliatedEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/EquityHoldingPersonType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/EquityHoldingPersonType"
                     }
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "oneOf": [
@@ -608,17 +608,17 @@
                     "const": "F10"
                 },
                 "answer": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AnswerType"
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "if": {
@@ -659,26 +659,26 @@
                     "const": "F11"
                 },
                 "answer": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AnswerType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AnswerType"
                 },
                 "testator": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/DeceasedPersonType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/DeceasedPersonType"
                 },
                 "affiliatedEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/BeneficiaryPersonType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/BeneficiaryPersonType"
                     }
                 },
                 "documentIDs": {
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "if": {
@@ -731,11 +731,11 @@
                     "type": "array",
                     "description": "Asset title",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/AssetTitlesType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/AssetTitlesType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "required": [
@@ -765,11 +765,11 @@
                 "affiliatedEntity": {
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_types_schema.json#/definitions/HolderPersonType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/HolderPersonType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "required": [

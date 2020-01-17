@@ -9,44 +9,44 @@
             "description": "Legal or natural person.",
             "oneOf": [
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/LegalPersonType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/LegalPersonType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/NaturalPersonType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/NaturalPersonType"
                 }
             ]
         },
         "street": {
-            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/StreetType"
+            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/StreetType"
         },
         "houseNumber": {
-            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/HouseNumberType"
+            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/HouseNumberType"
         },
         "zip": {
-            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/ZipType"
+            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/ZipType"
         },
         "city": {
-            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CityType"
+            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/CityType"
         },
         "state": {
-            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/CountryCodeType"
+            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/CountryCodeType"
         },
         "taxId": {
             "description": "Tax Identifiers of legal or natural person",
             "anyOf": [
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/TaxIdNaturalType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/TaxIdNaturalType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/TaxIdLegalType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/TaxIdLegalType"
                 }
             ]
         },
         "estvidOld": {
-            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/EstvIdType"
+            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/EstvIdType"
         },
         "fileNumberOld": {
-            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/FileNumberType"
+            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/FileNumberType"
         }
     },
     "if": {
@@ -55,14 +55,14 @@
     "then": {
         "properties": { 
             "taxId": { 
-                "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/TaxIdLegalType"
+                "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/TaxIdLegalType"
             } 
         }
     },
     "else": {
         "properties": {
             "taxId": {
-                "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/TaxIdNaturalType"
+                "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/TaxIdNaturalType"
             }
         }
     },

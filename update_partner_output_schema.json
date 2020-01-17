@@ -12,12 +12,12 @@
         "error": {
             "oneOf": [
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
                 },
                 {
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
                     }
                 }
             ]

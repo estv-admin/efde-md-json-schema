@@ -11,12 +11,12 @@
         },
         "decisionLetterDocument": {
             "description": "Decision letter in the form of a base64-encoded PDF document",
-            "$ref": "https://github.com/estv-admin/efde-md-json-schema/common_types_schema.json#/definitions/Base64EncodedDocumentType"
+            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/Base64EncodedDocumentType"
         },
         "error": {
             "type": "array",
             "items": {
-                "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+                "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
             }
         }
     },

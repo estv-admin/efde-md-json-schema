@@ -11,28 +11,28 @@
             "type": "array",
             "items": [
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question01Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question03Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question06Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question06Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question11Type"
                 }
             ],
             "additionalItems": {
                 "anyOf": [
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02AType"
                     },
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02BType"
                     }
                 ]
             }
@@ -43,37 +43,37 @@
             "type": "array",
             "items": [
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question01Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question03Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question04Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05AType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05BType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question07Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question07Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question11Type"
                 }
             ],
             "additionalItems": {
                 "anyOf": [
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02AType"
                     },
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02BType"
                     }
                 ]
             }
@@ -84,40 +84,40 @@
             "type": "array",
             "items": [
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question01Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question03Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question04Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05AType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05BType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question07Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question07Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question08Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question08Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question11Type"
                 }
             ],
             "additionalItems": {
                 "anyOf": [
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02AType"
                     },
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02BType"
                     }
                 ]
             }
@@ -128,40 +128,40 @@
             "type": "array",
             "items": [
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question01Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question03Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question04Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05AType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05BType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question07Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question07Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question09Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question09Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question11Type"
                 }
             ],
             "additionalItems": {
                 "anyOf": [
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02AType"
                     },
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02BType"
                     }
                 ]
             }
@@ -172,37 +172,37 @@
             "type": "array",
             "items": [
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question01Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question03Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question04Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05AType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05BType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question10Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question10Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question11Type"
                 }
             ],
             "additionalItems": {
                 "anyOf": [
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02AType"
                     },
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02BType"
                     }
                 ]
             }
@@ -213,40 +213,40 @@
             "type": "array",
             "items": [
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question01Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question03Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question04Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05AType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05BType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question07Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question07Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question11Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question12Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question12Type"
                 }
             ],
             "additionalItems": {
                 "anyOf": [
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02AType"
                     },
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02BType"
                     }
                 ]
             }
@@ -257,40 +257,40 @@
             "type": "array",
             "items": [
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question01Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question01Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question03Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question03Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question04Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question04Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05AType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05AType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question05BType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question05BType"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question07Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question07Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question11Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question11Type"
                 },
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question13Type"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question13Type"
                 }
             ],
             "additionalItems": {
                 "anyOf": [
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02AType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02AType"
                     },
                     {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/questionary_types_schema.json#/definitions/Question02BType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/questionary_types_schema.json#/definitions/Question02BType"
                     }
                 ]
             }

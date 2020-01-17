@@ -79,18 +79,18 @@
         "claimStatus": {
             "type": "array",
             "items": {
-                "$ref": "https://github.com/estv-admin/efde-md-json-schema/claim_status_query_output_schema.json#/definitions/ClaimStatusType"
+                "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_status_query_output_schema.json#/definitions/ClaimStatusType"
             }
         },
         "error": {
             "oneOf": [
                 {
-                    "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
                 },
                 {
                     "type": "array",
                     "items": {
-                        "$ref": "https://github.com/estv-admin/efde-md-json-schema/error_types_schema.json#/definitions/OutputErrorType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
                     }
                 }
             ]
