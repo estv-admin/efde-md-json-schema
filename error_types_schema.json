@@ -42,13 +42,13 @@
             "additionalProperties": false,
             "properties": {
                 "errorCode": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorCodeType"
+                    "$ref": "#/definitions/OutputErrorCodeType"
                 },
                 "errorDescription": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorDescriptionType"
+                    "$ref": "#/definitions/OutputErrorDescriptionType"
                 },
                 "errorReferenceID": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorReferenceIDType"
+                    "$ref": "#/definitions/OutputErrorReferenceIDType"
                 }
             },
             "required": [
