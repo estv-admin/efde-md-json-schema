@@ -450,7 +450,7 @@
             ]
         },
         "EquityHoldingPersonType": {
-            "$id": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/EquityHoldingPersonType",
+            "$id": "#/definitions/EquityHoldingPersonType",
             "type": "object",
             "description": "Describes a person holding an equity with validity period",
             "default": null,

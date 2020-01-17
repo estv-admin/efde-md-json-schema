@@ -91,10 +91,10 @@
                     "enum": [ "legal" ]
                 },
                 "company": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/CompanyType"
+                    "$ref": "#/definitions/CompanyType"
                 },
                 "entityForm": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/LegalFormType"
+                    "$ref": "#/definitions/LegalFormType"
                 }
             }
         },
@@ -172,13 +172,13 @@
             "properties": {
                 "type": { "enum": [ "natural" ] },
                 "firstName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/FirstNameType"
+                    "$ref": "#/definitions/FirstNameType"
                 },
                 "lastName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/LastNameType"
+                    "$ref": "#/definitions/LastNameType"
                 },
                 "birthDate": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/BirthDateType"
+                    "$ref": "#/definitions/BirthDateType"
                 }
             }
         },
@@ -557,10 +557,10 @@
             "additionalProperties": false,
             "properties": {
                 "taxIdNumber": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/TaxIdNumberType"
+                    "$ref": "#/definitions/TaxIdNumberType"
                 },
                 "taxNumber": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/TaxNumberType"
+                    "$ref": "#/definitions/TaxNumberType"
                 }
             },
             "anyOf": [
@@ -584,13 +584,13 @@
             "additionalProperties": false,
             "properties": {
                 "taxNumber": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/TaxNumberType"
+                    "$ref": "#/definitions/TaxNumberType"
                 },
                 "uStIDNr": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UStIDNrType"
+                    "$ref": "#/definitions/UStIDNrType"
                 },
                 "wIDNr": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/WIDNrType"
+                    "$ref": "#/definitions/WIDNrType"
                 }
             },
             "anyOf": [
