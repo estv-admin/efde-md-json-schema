@@ -85,12 +85,12 @@
         "error": {
             "oneOf": [
                 {
-                    "$ref": "#/definitions/OutputErrorType"
+                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
                 },
                 {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/OutputErrorType"
+                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
                     }
                 }
             ]
