@@ -39,36 +39,15 @@
                 "rejectionReason": {
                     "type": "string"
                 }
-            },
-            "if": {
-                "properties": {
-                    "status": {
-                        "type": "string",
-                        "enum": [ "Rejected" ]
-                    }
-                }
-            },
-            "then": {
-                "required": [
-                    "claimID",
-                    "caseID",
-                    "status",
-                    "claimYears",
-                    "totalRefundAmount",
-                    "lastChange",
-                    "rejectionReason"
-                ]
-            },
-            "else": {
-                "required": [
-                    "claimID",
-                    "caseID",
-                    "status",
-                    "claimYears",
-                    "totalRefundAmount",
-                    "lastChange"
-                ]
-            }
+            },            
+            "required": [
+                "claimID",
+                "caseID",
+                "status",
+                "claimYears",
+                "totalRefundAmount",
+                "lastChange"
+            ]
         }
     },
     "properties": {
@@ -83,17 +62,10 @@
             }
         },
         "error": {
-            "oneOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
-                },
-                {
-                    "type": "array",
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
-                    }
-                }
-            ]
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
+            }
         }
     },
     "if": {
