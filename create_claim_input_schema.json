@@ -6,19 +6,19 @@
     "additionalProperties": false,
     "properties": {
         "estvID": {
-            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/EstvIdType"
+            "$ref": "common_types_schema.json#/definitions/EstvIdType"
         },
         "legalFormType": {
-            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/LegalFormType"
+            "$ref": "common_types_schema.json#/definitions/LegalFormType"
         },
         "legalCity": {
-            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/LegalCityType"
+            "$ref": "common_types_schema.json#/definitions/LegalCityType"
         },
         "claimYears": {
             "description": "List of years of a claim",
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/ClaimYearType"
+                "$ref": "claim_types_schema.json#/definitions/ClaimYearType"
             },
             "minItems": 1,
             "maxItems": 4,
@@ -28,21 +28,21 @@
             "description": "List of securities",
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/ClaimSecurityType"
+                "$ref": "claim_types_schema.json#/definitions/ClaimSecurityType"
             }
         },
         "accounts": {
             "description": "List of accounts",
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/ClaimAccountType"
+                "$ref": "claim_types_schema.json#/definitions/ClaimAccountType"
             }
         },
         "monetaries": {
             "description": "List of monetaries",
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_types_schema.json#/definitions/ClaimMonetaryType"
+                "$ref": "claim_types_schema.json#/definitions/ClaimMonetaryType"
             }
         },
         "questionary": {
@@ -76,7 +76,7 @@
             "type": "object",
             "properties": {
                 "IBAN": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/IbanType"
+                    "$ref": "common_types_schema.json#/definitions/IbanType"
                 },
                 "accountHolderName": {
                     "type": "string",
@@ -93,10 +93,10 @@
             "type": "object",
             "properties": {
                 "phoneNumber": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/PhoneNumberType"
+                    "$ref": "common_types_schema.json#/definitions/PhoneNumberType"
                 },
                 "eMail": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/MailType"
+                    "$ref": "common_types_schema.json#/definitions/MailType"
                 }
             },
             "required": [
@@ -118,7 +118,7 @@
             "then": {
                 "properties": {
                     "questionary": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence01Type"
+                        "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence01Type"
                     }
                 }
             },
@@ -136,7 +136,7 @@
             "then": {
                 "properties": {
                     "questionary": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence02Type"
+                        "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence02Type"
                     }
                 }
             },
@@ -154,7 +154,7 @@
             "then": {
                 "properties": {
                     "questionary": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence03Type"
+                        "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence03Type"
                     }
                 }
             },
@@ -172,7 +172,7 @@
             "then": {
                 "properties": {
                     "questionary": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence04Type"
+                        "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence04Type"
                     }
                 }
             },
@@ -190,7 +190,7 @@
             "then": {
                 "properties": {
                     "questionary": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence05Type"
+                        "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence05Type"
                     }
                 }
             },
@@ -208,7 +208,7 @@
             "then": {
                 "properties": {
                     "questionary": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence06Type"
+                        "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence06Type"
                     }
                 }
             },
@@ -226,7 +226,7 @@
             "then": {
                 "properties": {
                     "questionary": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/claim_questionary_sequence_types_schema.json#/definitions/questionarySequence07Type"
+                        "$ref": "claim_questionary_sequence_types_schema.json#/definitions/questionarySequence07Type"
                     }
                 }
             },

@@ -10,18 +10,18 @@
             "type": "boolean"
         },
         "estvID": {
-            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/EstvIdType",
+            "$ref": "common_types_schema.json#/definitions/EstvIdType",
             "description": "ESTV ID of newly created partner - only present if 'success' property is true"
         },
         "error": {
             "oneOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
+                    "$ref": "error_types_schema.json#/definitions/OutputErrorType"
                 },
                 {
                     "type": "array",
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
+                        "$ref": "error_types_schema.json#/definitions/OutputErrorType"
                     }
                 }
             ]

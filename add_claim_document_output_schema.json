@@ -11,12 +11,12 @@
         },
         "docID": {
             "description": "ID of the added document to be used in claim - do not make assumptions about the format of the ID",
-            "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
+            "$ref": "common_types_schema.json#/definitions/UUIDType"
         },
         "error": {
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
+                "$ref": "error_types_schema.json#/definitions/OutputErrorType"
             }
         }
     },

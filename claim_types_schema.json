@@ -40,7 +40,7 @@
             "additionalProperties": false,
             "properties": {
                 "institutionName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/InstitutionNameType"
+                    "$ref": "common_types_schema.json#/definitions/InstitutionNameType"
                 },
                 "title": {
                     "type": "string",
@@ -62,16 +62,16 @@
                     "description": "Valor number of a title"
                 },
                 "uid": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UIDType"
+                    "$ref": "common_types_schema.json#/definitions/UIDType"
                 },
                 "acquiredDate": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/AcquiredDateType"
+                    "$ref": "common_types_schema.json#/definitions/AcquiredDateType"
                 },
                 "dueDate": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/DueDateType"
+                    "$ref": "common_types_schema.json#/definitions/DueDateType"
                 },
                 "refundRate": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/RefundRateType"
+                    "$ref": "common_types_schema.json#/definitions/RefundRateType"
                 },
                 "nbTitles": {
                     "type": "number",
@@ -125,11 +125,11 @@
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "allOf": [
@@ -237,7 +237,7 @@
             "additionalProperties": false,
             "properties": {
                 "IBAN": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/IbanType"
+                    "$ref": "common_types_schema.json#/definitions/IbanType"
                 },
                 "description": {
                     "type": "string",
@@ -245,10 +245,10 @@
                     "minLength": 3
                 },
                 "dueDate": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/DueDateType"
+                    "$ref": "common_types_schema.json#/definitions/DueDateType"
                 },
                 "refundRate": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/RefundRateType"
+                    "$ref": "common_types_schema.json#/definitions/RefundRateType"
                 },
                 "grossInterest": {
                     "type": "number",
@@ -266,11 +266,11 @@
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "required": [
@@ -292,17 +292,17 @@
             "additionalProperties": false,
             "properties": {
                 "institutionName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/InstitutionNameType"
+                    "$ref": "common_types_schema.json#/definitions/InstitutionNameType"
                 },
                 "monetaryName": {
                     "type": "string",
                     "description": "Description of the monetary"
                 },
                 "dueDate": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/DueDateType"
+                    "$ref": "common_types_schema.json#/definitions/DueDateType"
                 },
                 "refundRate": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/RefundRateType"
+                    "$ref": "common_types_schema.json#/definitions/RefundRateType"
                 },
                 "grossIncome": {
                     "type": "number",
@@ -320,11 +320,11 @@
                     "description": "Documents have to be added using the 'add claim document' API endpoint which returns a document id to be used as a reference here",
                     "type": "array",
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
+                        "$ref": "common_types_schema.json#/definitions/UUIDType"
                     }
                 },
                 "refID": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/UUIDType"
+                    "$ref": "common_types_schema.json#/definitions/UUIDType"
                 }
             },
             "required": [
@@ -367,7 +367,7 @@
             "additionalProperties": false,
             "properties": {
                 "taxDomicile": {                    
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/CountryCodeType"
+                    "$ref": "common_types_schema.json#/definitions/CountryCodeType"
                 },
                 "dateFrom": {
                     "type": "string",
@@ -394,7 +394,7 @@
             "additionalProperties": false,
             "properties": {
                 "legalFormType": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/LegalFormType"
+                    "$ref": "common_types_schema.json#/definitions/LegalFormType"
                 },
                 "dateFrom": {
                     "type": "string",
@@ -457,25 +457,25 @@
             "additionalProperties": false,
             "properties": {
                 "firstName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/FirstNameType"
+                    "$ref": "common_types_schema.json#/definitions/FirstNameType"
                 },
                 "lastName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/LastNameType"
+                    "$ref": "common_types_schema.json#/definitions/LastNameType"
                 },
                 "address": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/AddressLineType"
+                    "$ref": "common_types_schema.json#/definitions/AddressLineType"
                 },
                 "postCode": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/ZipType"
+                    "$ref": "common_types_schema.json#/definitions/ZipType"
                 },
                 "city": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/CityType"
+                    "$ref": "common_types_schema.json#/definitions/CityType"
                 },
                 "country": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/CountryCodeType"
+                    "$ref": "common_types_schema.json#/definitions/CountryCodeType"
                 },
                 "quotePercentage": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/PercentageType"
+                    "$ref": "common_types_schema.json#/definitions/PercentageType"
                 }
             },
             "required": [
@@ -496,16 +496,16 @@
             "additionalProperties": false,
             "properties": {
                 "firstName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/FirstNameType"
+                    "$ref": "common_types_schema.json#/definitions/FirstNameType"
                 },
                 "lastName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/LastNameType"
+                    "$ref": "common_types_schema.json#/definitions/LastNameType"
                 },
                 "lastResidence": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/AddressLineType"
+                    "$ref": "common_types_schema.json#/definitions/AddressLineType"
                 },
                 "deathDate": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/DeathDateType"
+                    "$ref": "common_types_schema.json#/definitions/DeathDateType"
                 }
             },
             "required": [
@@ -523,25 +523,25 @@
             "additionalProperties": false,
             "properties": {
                 "firstName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/FirstNameType"
+                    "$ref": "common_types_schema.json#/definitions/FirstNameType"
                 },
                 "lastName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/LastNameType"
+                    "$ref": "common_types_schema.json#/definitions/LastNameType"
                 },
                 "address": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/AddressLineType"
+                    "$ref": "common_types_schema.json#/definitions/AddressLineType"
                 },
                 "postCode": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/ZipType"
+                    "$ref": "common_types_schema.json#/definitions/ZipType"
                 },
                 "city": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/CityType"
+                    "$ref": "common_types_schema.json#/definitions/CityType"
                 },
                 "country": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/CountryCodeType"
+                    "$ref": "common_types_schema.json#/definitions/CountryCodeType"
                 },
                 "quotePercentage": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/PercentageType"
+                    "$ref": "common_types_schema.json#/definitions/PercentageType"
                 }
             },
             "required": [
@@ -562,22 +562,22 @@
             "additionalProperties": false,
             "properties": {
                 "firstName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/FirstNameType"
+                    "$ref": "common_types_schema.json#/definitions/FirstNameType"
                 },
                 "lastName": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/LastNameType"
+                    "$ref": "common_types_schema.json#/definitions/LastNameType"
                 },
                 "address": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/AddressLineType"
+                    "$ref": "common_types_schema.json#/definitions/AddressLineType"
                 },
                 "postCode": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/ZipType"
+                    "$ref": "common_types_schema.json#/definitions/ZipType"
                 },
                 "city": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/CityType"
+                    "$ref": "common_types_schema.json#/definitions/CityType"
                 },
                 "country": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/CountryCodeType"
+                    "$ref": "common_types_schema.json#/definitions/CountryCodeType"
                 }
             },
             "required": [
@@ -596,13 +596,13 @@
             "additionalProperties": false,
             "properties": {
                 "year": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/NumberType"
+                    "$ref": "common_types_schema.json#/definitions/NumberType"
                 },
 		        "titlesDE": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/NumberType"
+                    "$ref": "common_types_schema.json#/definitions/NumberType"
                 },		        
 		        "totalTitles": {
-                    "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/common_types_schema.json#/definitions/NumberType"
+                    "$ref": "common_types_schema.json#/definitions/NumberType"
                 }
             },
             "required": [

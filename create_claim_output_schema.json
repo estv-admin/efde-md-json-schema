@@ -16,7 +16,7 @@
         "error": {
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/estv-admin/efde-md-json-schema/master/error_types_schema.json#/definitions/OutputErrorType"
+                "$ref": "error_types_schema.json#/definitions/OutputErrorType"
             }
         }
     },
