@@ -72,7 +72,7 @@
                 { "const": "PTP", "description": "Politische Partei (sofern kein eingetragener Verein)" },
                 { "const": "PRE", "description": "Partnerreederei" },
                 { "const": "ERB", "description": "Erbschaft" },
-                { "const": "ERG", "description": "Erbengemeinschaft" }
+                { "const": "EBG", "description": "Erbengemeinschaft" }
             ]
         },
         "LegalPersonType": {
