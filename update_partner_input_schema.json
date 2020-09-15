@@ -38,7 +38,7 @@
         },
         "taxId": {
             "description": "Tax Identifiers of legal or natural person",
-            "oneOf": [
+            "anyOf": [
                 {
                     "$ref": "common_types_schema.json#/definitions/TaxIdNaturalType"
                 },
