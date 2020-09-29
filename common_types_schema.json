@@ -513,9 +513,9 @@
         },
         "TaxNumberType": {
             "$id": "#/definitions/TaxNumberType",
-            "allOf": [
-                { "type": "string" },
-                { "maxLength": 13 }
+            "oneOf": [
+                { "pattern": "^(\/|\\d){10,13}$" },
+                { "maxLength": 0 }
             ],
             "description": "Steuernummer / St.-Nr. / https://de.wikipedia.org/wiki/Steuernummer",
             "default": "",
