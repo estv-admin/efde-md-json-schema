@@ -226,6 +226,16 @@
             ],
             "pattern": "^(.*)$"
         },
+        "ZipTypeGermany": {
+            "$id": "#/definitions/ZipTypeGermany",
+            "type": "string",
+            "description": "Zip of an address in Germany",
+            "default": "",
+            "examples": [
+                "10115"
+            ],
+            "pattern": "^\\d\\d\\d\\d\\d$"
+        },
         "CityType": {
             "$id": "#/definitions/CityType",
             "allOf": [

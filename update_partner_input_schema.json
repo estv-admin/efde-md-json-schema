@@ -28,7 +28,7 @@
             "$ref": "common_types_schema.json#/definitions/HouseNumberType"
         },
         "zip": {
-            "$ref": "common_types_schema.json#/definitions/ZipType"
+            "$ref": "common_types_schema.json#/definitions/ZipTypeGermany"
         },
         "city": {
             "$ref": "common_types_schema.json#/definitions/CityType"
