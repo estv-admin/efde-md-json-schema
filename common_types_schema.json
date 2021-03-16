@@ -659,7 +659,7 @@
             "examples": [
                 "DE27100777770209299700"
             ],
-            "pattern": "^[A-Z]{2}\\d{10,34}$"
+            "pattern": "^[A-Z]{2}\\d{2}[A-Z0-9]{10,30}$"
         },
         "InstitutionNameType": {
             "$id": "#/definitions/InstitutionNameType",
