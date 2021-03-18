@@ -124,7 +124,7 @@
         },
         "questionarySequence04Type": {
             "$id": "#/definitions/questionarySequence04Type",
-            "description": "List of questions of fourth case - legal persons with additional F9",
+            "description": "List of questions of fourth case - legal persons with additional F9 (GBR)",
             "type": "array",
             "items": [
                 {
