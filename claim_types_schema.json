@@ -149,9 +149,6 @@
                             "dueDate",
                             "refundRate",
                             "credit",
-                            "interestRate",
-                            "nominal",
-                            "paymentValue",
                             "grossInterest",
                             "refundAmountInterest"
                         ]
