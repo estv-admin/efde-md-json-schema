@@ -143,14 +143,29 @@
                             "title",
                             "location",
                             "assetType",
-                            "isin",
-                            "valor",
                             "acquiredDate",
                             "dueDate",
                             "refundRate",
                             "credit",
                             "grossInterest",
                             "refundAmountInterest"
+                        ],
+			"anyOf": [
+                            { 
+                                "required": [ 
+                                    "isin" 
+                                ] 
+                            },
+                            { 
+                                "required": [ 
+                                    "valor" 
+                                ] 
+                            },
+                            { 
+                                "required": [ 
+                                    "uid" 
+                                ] 
+                            }
                         ]
                     }
                 },
@@ -186,9 +201,9 @@
                     "then": {
                         "required": [
                             "institutionName",
+			    "title",
                             "location",
                             "assetType",
-                            "uid",
                             "acquiredDate",
                             "dueDate",
                             "refundRate",
@@ -196,6 +211,23 @@
                             "dividendPerTitle",
                             "grossDividend",
                             "refundAmountDividend"
+                        ],
+			"anyOf": [
+                            { 
+                                "required": [ 
+                                    "isin" 
+                                ] 
+                            },
+                            { 
+                                "required": [ 
+                                    "valor" 
+                                ] 
+                            },
+                            { 
+                                "required": [ 
+                                    "uid" 
+                                ] 
+                            }
                         ]
                     }
                 },
