@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "token_renewal_output_schema.json",
+  "type": "object",
+  "description": "Schema eF85 MD Call is used to renew an access token using a refresh token as header attribute. There is no input schema because the request does not contain a json body.",
+  "additionalProperties": false,
+  "definitions": {
+    "AccessTokenInfoType": {
+      "$id": "#/definitions/AccessTokenInfoType",
+      "type": "object",
+      "description": "Data of the newly created access token",
+      "default": null,
+      "additionalProperties": false,
+      "properties": {
+        "token": {
+          "type": "string",
+          "examples": [
+            "UU00ZlhHZ1NPSmlIU1ZqNW9uVE5RaTdsYVN4MUYrMUJ6L1Z6MDRwT2I5Vk9JUmIrY2xZeks4cTk1a2pKNWQrU2ZTRHovQT09"
+          ]
+        },
+        "groupID": {
+          "type": "number",
+          "examples": ["10510"]
+        },
+        "validUntil": {
+          "type": "string",
+          "examples": ["22.09.2021"]
+        },
+        "generateDate": {
+          "type": "string",
+          "examples": ["24.06.2021"]
+        },
+        "status": {
+          "type": "string",
+          "const": "valid"
+        }
+      },
+      "required": ["token", "groupID", "validUntil", "generateDate", "status"]
+    }
+  },
+  "properties": {
+    "success": {
+      "description": "Result of the operation",
+      "type": "boolean"
+    },
+    "statusCode": {
+      "description": "Status code of the operation",
+      "type": "number",
+      "const": 200
+    },
+    "data": {
+      "type": "object",
+      "description": "Data of the newly created access token",
+      "$ref": "token_renewal_output_schema.json#/definitions/AccessTokenInfoType"
+    }
+  }
+}
