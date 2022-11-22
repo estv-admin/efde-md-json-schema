@@ -126,7 +126,8 @@
                     "type": "array",
                     "items": {
                         "$ref": "common_types_schema.json#/definitions/UUIDType"
-                    }
+                    },
+		    "minItems": 1
                 },
                 "refID": {
                     "$ref": "common_types_schema.json#/definitions/UUIDType"
@@ -148,7 +149,8 @@
                             "refundRate",
                             "credit",
                             "grossInterest",
-                            "refundAmountInterest"
+                            "refundAmountInterest",
+			    "documentIDs"
                         ],
 			"anyOf": [
                             { 
@@ -187,7 +189,8 @@
                             "dividendPerTitle",
                             "grossDividend",
                             "refundAmountDividend",
-                            "amountTitleOrganisation"
+                            "amountTitleOrganisation",
+			    "documentIDs"
                         ]
                     }
                 },
@@ -210,7 +213,8 @@
                             "nbTitles",
                             "dividendPerTitle",
                             "grossDividend",
-                            "refundAmountDividend"
+                            "refundAmountDividend",
+		            "documentIDs"
                         ],
 			"anyOf": [
                             { 
@@ -252,7 +256,8 @@
                             "nbTitles",
                             "dividendPerTitle",
                             "grossDividend",
-                            "refundAmountDividend"
+                            "refundAmountDividend",
+			    "documentIDs"
                         ]
                     }
                 }
@@ -296,7 +301,8 @@
                     "type": "array",
                     "items": {
                         "$ref": "common_types_schema.json#/definitions/UUIDType"
-                    }
+                    },
+		    "minItems": 1
                 },
                 "refID": {
                     "$ref": "common_types_schema.json#/definitions/UUIDType"
@@ -350,7 +356,8 @@
                     "type": "array",
                     "items": {
                         "$ref": "common_types_schema.json#/definitions/UUIDType"
-                    }
+                    },
+		    "minItems": 1
                 },
                 "refID": {
                     "$ref": "common_types_schema.json#/definitions/UUIDType"
