@@ -3,7 +3,6 @@
     "$id": "create_partner_input_schema.json",
     "type": "object",
     "description": "Schema eF85 MD Create Partner Input",
-    "additionalProperties": false,
     "properties": {
         "person": {
             "description": "Legal or natural person.",
@@ -21,9 +20,6 @@
         },
         "houseNumber": {
             "$ref": "common_types_schema.json#/definitions/HouseNumberType"
-        },
-        "zip": {
-            "$ref": "common_types_schema.json#/definitions/ZipTypeGermany"
         },
         "city": {
             "$ref": "common_types_schema.json#/definitions/CityType"
@@ -49,23 +45,46 @@
             "$ref": "common_types_schema.json#/definitions/FileNumberType"
         }
     },
-    "if": {
-        "properties": { "person": { "properties": { "type": { "const": "legal" } } } }
-    },
-    "then": {
-        "properties": { 
-            "taxId": { 
-                "$ref": "common_types_schema.json#/definitions/TaxIdLegalType"
-            } 
-        }
-    },
-    "else": {
-        "properties": {
-            "taxId": {
-                "$ref": "common_types_schema.json#/definitions/TaxIdNaturalType"
+    "allOf": [
+        {
+            "if": {
+                "properties": { "state": { "const": "DE" } }
+            },
+            "then": {
+                "properties": {
+                    "zip": {
+                        "$ref": "common_types_schema.json#/definitions/ZipTypeGermany"
+                    }
+                }
+            },
+            "else": {
+                "properties": {
+                    "zip": {
+                        "$ref": "common_types_schema.json#/definitions/ZipType"
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": { "person": { "properties": { "type": { "const": "legal" } } } }
+            },
+            "then": {
+                "properties": { 
+                    "taxId": { 
+                        "$ref": "common_types_schema.json#/definitions/TaxIdLegalType"
+                    } 
+                }
+            },
+            "else": {
+                "properties": {
+                    "taxId": {
+                        "$ref": "common_types_schema.json#/definitions/TaxIdNaturalType"
+                    }
+                }
             }
         }
-    },
+    ],
     "required": [
         "person",
         "zip",
