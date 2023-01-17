@@ -4,6 +4,64 @@
     "type": "object",
     "description": "Schema eF85 MD Download Decision Letter Output",
     "additionalProperties": false,
+    "definitions": {
+        "CorrectionEntryType": {
+            "$id": "#/definitions/CorrectionEntryType",
+            "type": "object",
+            "description": "Information for corrected asset entry",
+            "properties": {
+                "correctionId": {
+                    "type": "string",
+                    "description": "Correction identifier of a decision letter",
+                    "maxLength": 45,
+                    "examples": [
+                        "1",
+                        "2"
+                    ]
+                },
+                "declaredAmount": {
+                    "type": "string",
+                    "description": "Amount requested by beneficiary owner",
+                    "maxLength": 45,
+                    "examples": [
+                        "0.25"
+                    ]
+                },
+                "effectiveAmount": {
+                    "type": "string",
+                    "description": "Corrected amount by FTA",
+                    "maxLength": 45,
+                    "examples": [
+                        "1000.25"
+                    ]
+                },
+                "amountDifference": {
+                    "type": "string",
+                    "description": "Difference between declared and effective amount",
+                    "maxLength": 45,
+                    "examples": [
+                        "1000.00"
+                    ]
+                },
+                "reason": {
+                    "type": "string",
+                    "description": "Reason of correction",
+                    "maxLength": 45,
+                    "examples": [
+                        "022-103-001"
+                    ]
+                },
+                "comment": {
+                    "type": "string",
+                    "description": "Description of correction",
+                    "maxLength": 512,
+                    "examples": [
+                        "Amount incorrect"
+                    ]
+                }
+            }
+        }
+    },
     "properties": {
         "success": {
             "description": "Result of the operation",
@@ -13,26 +71,58 @@
             "description": "Decision letter in the form of a base64-encoded PDF document",
             "$ref": "common_types_schema.json#/definitions/Base64EncodedDocumentType"
         },
-        "error": {
-            "type": "array",
-            "items": {
-                "$ref": "error_types_schema.json#/definitions/OutputErrorType"
+        "decisionLetterCorrection": {
+            "description": "Contains information about corrections if available",
+            "properties": {
+                "businessCaseId": {
+                    "description": "The internal id for this business case",
+                    "type": "string",
+                    "maxLength": 45,
+                    "examples": [
+                        "3nu3008u"
+                    ]
+                },
+                "totalRefundAmount": {
+                    "description": "The total correction adjusted refund amount",
+                    "type": "string",
+                    "maxLength": 45,
+                    "examples": [
+                        "420350.09"
+                    ]
+                },
+                "corrections": {
+                    "type": "array",
+                    "description": "Contains the information for each corrected asset entry",
+                    "items": {
+                        "$ref": "download_decision_letter_output_schema.json#/definitions/CorrectionEntryType"
+                    }
+                }
+            },
+            "error": {
+                "type": "array",
+                "items": {
+                    "$ref": "error_types_schema.json#/definitions/OutputErrorType"
+                }
             }
+        },
+        "if": {
+            "properties": {
+                "success": {
+                    "const": false
+                }
+            }
+        },
+        "then": {
+            "required": [
+                "success",
+                "error"
+            ]
+        },
+        "else": {
+            "required": [
+                "success",
+                "decisionLetterDocument"
+            ]
         }
-    },
-    "if": {
-        "properties": { "success": { "const": false } }
-    },
-    "then": {
-        "required": [
-            "success",
-            "error"
-        ]
-    },
-    "else": {
-        "required": [
-            "success",
-            "decisionLetterDocument"
-        ]
     }
 }
