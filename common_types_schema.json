@@ -5,6 +5,12 @@
     "description": "Schema eF85 MD Common Types",
     "additionalProperties": false,
     "definitions": {
+        "BatchModeType": {
+            "$id": "#/definitions/BatchModeType",
+            "type": "boolean",
+            "description": "Enable BatchMode for Stampletter Processing",
+            "default": "false"
+        },
         "CompanyType": {
             "$id": "#/definitions/CompanyType",
             "type": "string",

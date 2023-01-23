@@ -5,6 +5,9 @@
     "description": "Schema eF85 MD New Claim Input",
     "additionalProperties": false,
     "properties": {
+        "batchMode": {
+            "$ref": "common_types_schema.json#/definitions/BatchModeType"
+        },
         "estvID": {
             "$ref": "common_types_schema.json#/definitions/EstvIdType"
         },
